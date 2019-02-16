@@ -1,0 +1,28 @@
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\bin\Debug\AddPharmacy.exe.config
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\bin\Debug\AddPharmacy.exe.manifest
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\bin\Debug\AddPharmacy.application
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\bin\Debug\AddPharmacy.exe
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\bin\Debug\AddPharmacy.pdb
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\About.baml
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacyWindow.baml
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\MainWindow.baml
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\SearchParmacyWindow.baml
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\Set Value.baml
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\TransferRX.baml
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\About.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacyWindow.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\MainWindow.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\SearchParmacyWindow.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\Set Value.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\TransferRX.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\App.g.cs
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy_MarkupCompile.cache
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.g.resources
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.Properties.Resources.resources
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.csproj.GenerateResource.Cache
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.exe.manifest
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.application
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.exe
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.pdb
+C:\Users\pei.wang\Documents\Visual Studio 2013\Projects\AddPharmacy\AddPharmacy\obj\Debug\AddPharmacy.csprojResolveAssemblyReference.cache
+C:\Users\aweso\Documents\AddPharmacy\AddPharmacy\bin\Debug\AddPharmacy.exe.config

@@ -1,0 +1,14 @@
+﻿<Window x:Class="AddPharmacy.TransferRX"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TransferRX" Height="200" Width="300" Background="#fafafa" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Icon="c:\users\pei.wang\documents\visual studio 2013\projects\AddPharmacy\AddPharmacy\Resources\transfer.ico">
+    <Grid>
+        <Label Content="Patient's MRN" HorizontalAlignment="Left" Margin="20,25,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="transferMrn" HorizontalAlignment="Left" Height="23" Margin="138,25,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="136"/>
+        <Label Content="Pharmacy's Phone" HorizontalAlignment="Left" Margin="20,68,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="transferPhone" HorizontalAlignment="Left" Height="23" Margin="138,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="136"/>
+        <Button x:Name="transerOk" Content="OK" HorizontalAlignment="Left" Margin="78,123,0,0" VerticalAlignment="Top" Width="75" Click="transerOk_Click"/>
+        <Button x:Name="transferCancel" Content="Cancel" HorizontalAlignment="Left" Margin="185,123,0,0" VerticalAlignment="Top" Width="75" Click="transferCancel_Click"/>
+
+    </Grid>
+</Window>

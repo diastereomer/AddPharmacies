@@ -1,0 +1,101 @@
+DECLARE	@Title VARCHAR(80) = NULL							
+		                            ,@FirstName VARCHAR(80)	= NULL						
+		                            ,@MiddleInitial VARCHAR(80)	= NULL					
+		                            ,@LastName VARCHAR(80) = NULL							
+		                            ,@Title1 VARCHAR(80) = NULL							
+		                            ,@Phone VARCHAR(80) = ltrim(rtrim('123-456-7896'	))		
+		                            ,@StoreName VARCHAR(80) = ltrim(rtrim('store #'))		
+		                            ,@Address VARCHAR(80) = ltrim(rtrim('address'))		
+		                            ,@City VARCHAR(80) = ltrim(rtrim('city'))					
+		                            ,@State VARCHAR(80) = ltrim(rtrim('System.Windows.Controls.TextBox: st'))						
+		                            ,@Zip VARCHAR(80) = ltrim(rtrim('12345'))						
+		                            ,@Company VARCHAR(80) = ltrim(rtrim('com'))					
+		                            ,@PharmacyType VARCHAR(80) = ltrim(rtrim('System.Windows.Controls.ComboBox Items.Count:4'))			
+		                            ,@ParsedStoreName VARCHAR(80) = ltrim(rtrim('store'))
+		                            ,@StoreNumber VARCHAR(80) = case when ltrim(rtrim(''))='' then Null else '#'+ltrim(rtrim(''))  end											
+		                            ,@MRN INT =case when ltrim(rtrim(''))='' then Null else cast( ltrim(rtrim('')) as int) end						
+
+                            DECLARE	@CPK_SALESREP INT
+
+                            IF(	ISNULL(@StoreName,'') != '' 
+	                            AND ISNULL(@Address,'') != '' 
+	                            AND ISNULL(@City,'') != '' 
+	                            AND ISNULL(@Phone,'') != '' 
+	                            AND ISNULL(@State,'') != '' 
+	                            AND ISNULL(@Zip,'') != '' 
+	                            AND ISNULL(@Company,'') != '' 
+	                            AND ISNULL(@PharmacyType,'') != '' 
+	                            AND ISNULL(@ParsedStoreName,'') != ''
+	                            AND NOT EXISTS(SELECT Phone FROM DSICPR..PharmacyList WHERE Phone = @Phone)
+	                            )
+
+                            BEGIN
+
+                            SET @CPK_SALESREP = (SELECT MAX(CPK_SALESREP) FROM CPRSQL..SalesRep) + 1
+
+                            INSERT	INTO DSICPR..PharmacyList
+                            SELECT	ISNULL(@Title,'')
+		                            ,ISNULL(@FirstName,'')
+		                            ,ISNULL(@MiddleInitial,'')
+		                            ,ISNULL(@LastName,'')
+		                            ,ISNULL(@Title1,'')
+		                            ,@StoreName
+		                            ,@Address
+		                            ,@City
+		                            ,@Phone
+		                            ,@State
+		                            ,@Zip
+		                            ,@Company
+		                            ,@PharmacyType
+		                            ,@ParsedStoreName
+		                            ,ISNULL(@StoreNumber,'')
+
+                            INSERT INTO CPRSQL..SALESREP	(
+								                            CPK_SALESREP
+								                            ,CODE
+								                            ,FNAME
+								                            ,LNAME
+								                            ,SITENO
+								                            ,DELFLAG
+								                            )
+                            SELECT	@CPK_SALESREP
+		                            ,''
+		                            ,@Phone
+		                            ,@StoreName
+		                            ,1
+		                            ,0
+
+                            SELECT	*
+                            FROM	DSICPR..PharmacyList
+                            WHERE	Phone = @Phone
+
+                            SELECT	*
+                            FROM	CPRSQL..SALESREP
+                            WHERE	FNAME = @Phone
+
+                            END
+
+                            ELSE
+
+                            BEGIN
+
+	                            SET @CPK_SALESREP = (SELECT CPK_SALESREP FROM CPRSQL..SalesRep WHERE FNAME = @Phone)
+	                            SELECT	'Pharmacy Already Exists in database'
+
+                            END
+
+                            IF	(@MRN IS NOT NULL)
+                            BEGIN
+
+                            UPDATE	OT
+                            SET		CFK_SALESREP = @CPK_SALESREP
+                            FROM	CPRSQL..OT
+                            WHERE	referral LIKE '%Transfer%'
+		                            AND MRN = @MRN
+		                            AND ISNULL(cfk_salesrep,'') = ''
+		                            AND CAST(TOUCHDATE AS date) >= CAST(DATEADD(D, -1, GETDATE()) AS date)
+		                            AND CAST(TOUCHDATE AS date) <= CAST(DATEADD(D, 1, GETDATE()) AS date)
+		                            AND CAST(CREATEDON AS date) >= CAST(DATEADD(D, -15, GETDATE()) AS date)
+		                            AND CAST(CREATEDON AS date) <= CAST(DATEADD(D, 15, GETDATE()) AS date)
+
+                                                END

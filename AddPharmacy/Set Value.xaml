@@ -1,0 +1,14 @@
+﻿<Window x:Class="AddPharmacy.Set_Value"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Set_Value" Height="150" Width="300"  Background="#fafafa" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  Icon="c:\users\pei.wang\documents\visual studio 2013\projects\AddPharmacy\AddPharmacy\Resources\setting.ico" >
+    <Grid>
+        <Label x:Name="setLabel" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="setTextBox" Text="" Height="23" Margin="10,40,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" ToolTip="Enter the value"/>
+        <Button x:Name="backButton" Content="Back" HorizontalAlignment="Left" Margin="10,0,0,15" VerticalAlignment="Bottom" Width="50" ToolTip="get the original value" Click="backButton_Click"/>
+        <Button x:Name="clearButton" Content="Clear" HorizontalAlignment="Left" Margin="80,0,0,15" VerticalAlignment="Bottom" Width="50" ToolTip="clear textbox" Click="clearButton_Click"/>
+        <Button x:Name="okButton" Content="OK" HorizontalAlignment="Right" Margin="0,0,80,15" VerticalAlignment="Bottom" Width="50" ToolTip="Update the value" Click="okButton_Click"/>
+        <Button x:Name="cancelButton" Content="Cancel" HorizontalAlignment="Right" Margin="0,0,10,15" VerticalAlignment="Bottom" Width="50" ToolTip="don't change" Click="cancelButton_Click"/>
+
+    </Grid>
+</Window>
